@@ -4,17 +4,19 @@ body {
 .grid-container {
   width: 600px;
   height: 600px;
-  border: 10px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20vw;
+  margin-left: 33vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .grid-box {
-  outline: 1px solid black;
   display: flex;
   width: 100%;
   height: 100%;
+  cursor: none;
 }
 .row-container {
   width: 100%;
@@ -24,4 +26,55 @@ body {
 }
 .color {
   background-color: black;
+}
+
+.grid-button {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 33vw;
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: flex;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+
+  outline: none;
+  padding: 13px 23px;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: auto;
+}
+
+.grid-button :focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.grid-button :active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+.grid-button :disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

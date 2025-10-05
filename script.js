@@ -22,9 +22,12 @@ function playGame() {
     })
   );
 }
-create(16);
+let num = 16;
+create(num);
 const gridBtn = document.querySelector("#gridBtn");
 gridBtn.addEventListener("click", (e) => {
-  let num = prompt(alert("Enter the sixe of the grid max 100"));
+  num = prompt(alert("Enter the sixe of the grid max 100"));
   create(num);
 });
+const clearBtn = document.querySelector("#clearBtn");
+clearBtn.addEventListener("click", () => create(num));
